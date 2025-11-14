@@ -1,12 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to My Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nichelle Gilbert</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <h1>Hello, I’m Nichelle 👋</h1>
-  <p>Welcome to my personal GitHub.io website!</p>
+  <nav class="navbar">
+    <h1>NG</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hi, I’m <span>Nichelle Gilbert</span></h2>
+      <p>Computer Science + Neuroscience student at the University of Texas at Austin</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I’m passionate about exploring how computation and cognition intersect — from optimizing robotic systems to understanding human intelligence.
+      At UT Austin, I’m pursuing Computer Science and Neuroscience to bridge those worlds through technology, problem-solving, and discovery.
+    </p>
+  </section>
+
+  <section id="experience">
+  <h2>Experience</h2>
+  <div class="experience-grid">
+    <div class="experience-card" data-modal="modal1">
+      <h3>Software Lead</h3>
+      <p>FIRST Robotics Team 11260</p>
+    </div>
+    <div class="experience-card" data-modal="modal2">
+      <h3>Engineering Process Lead</h3>
+      <p>FIRST Robotics Team 11260</p>
+    </div>
+    <div class="experience-card" data-modal="modal3">
+      <h3>NIST Research Intern</h3>
+      <p>Smart Manufacturing Systems</p>
+    </div>
+    <div class="experience-card" data-modal="modal4">
+      <h3>Community Involvement</h3>
+      <p>STEM Outreach & Volunteering</p>
+    </div>
+    <div class="experience-card" data-modal="modal5">
+      <h3>Mentorship</h3>
+      <p>FIRST Lego League & Peer Support</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Software Lead</h3>
+    <p>As software lead and driver, I helped rewrite over 8000 lines of robot code in Kotlin for improved readability and modularity...</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Engineering Process Lead</h3>
+    <p>Oversaw design reviews, documentation, and ensured consistency between hardware and software workflows...</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>NIST Research Intern</h3>
+    <p>Worked with advanced 3D metrology systems, including the SLM, and taught experts to apply new software visualization techniques...</p>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Community Involvement</h3>
+    <p>Organized outreach events, led robotics demos for younger students, and collaborated with Back On Track America on community drives...</p>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Mentorship</h3>
+    <p>Mentored FLL students through competition prep and guided peers in programming fundamentals and debugging strategies...</p>
+  </div>
+</div>
+
+
+<!-- Pop-up Modals -->
+<div id="exp1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Software Lead — Team 11260</h2>
+    <p>As Software Lead and driver, I rewrote our entire 8000-line framework in Kotlin for readability and adaptability, mentored new coders, and helped lead the team to multiple awards — including second place at Worlds.</p>
+  </div>
+</div>
+
+<div id="exp2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Research Assistant</h2>
+    <p>Worked on integrating brain–computer interface (BCI) signals into robotic control systems, focusing on neural decoding algorithms and system responsiveness.</p>
+  </div>
+</div>
+
+<div id="exp3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>STEM Mentor</h2>
+    <p>Mentored FIRST LEGO League students through design and programming challenges, and created Sharkbot — a kid-friendly outreach robot that inspires students in STEM.</p>
+  </div>
+</div>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect:</p>
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/nichellegilbert" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ngilbert18" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:nich.gilbert@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nichelle Gilbert</p>
+  </footer>
+
+  <script>
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
